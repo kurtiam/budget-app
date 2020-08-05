@@ -16,10 +16,10 @@ app.use(express.static("public"));
 
 // Commented out old code 
 
-// mongoose.connect("mongodb://localhost/budget", {
-//   useNewUrlParser: true,
-//   useFindAndModify: false
-// });
+mongoose.connect("mongodb://localhost/budget", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 // Added for Heroku access
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
